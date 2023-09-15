@@ -19,9 +19,9 @@ namespace ProjectTemplate
 		////////////////////////////////////////////////////////////////////////
 		///replace the values of these variables with your database credentials
 		////////////////////////////////////////////////////////////////////////
-		private string dbID = "cis440template";
-		private string dbPass = "!!Cis440";
-		private string dbName = "cis440template";
+		private string dbID = "fall2023team4";
+		private string dbPass = "fall2023team4";
+		private string dbName = "fall2023team4";
 		////////////////////////////////////////////////////////////////////////
 		
 		////////////////////////////////////////////////////////////////////////
@@ -43,7 +43,8 @@ namespace ProjectTemplate
 		{
 			try
 			{
-				string testQuery = "select * from test";
+				// Change customers if you want to test a new dddb table
+				string testQuery = "select * from Customers";
 
 				////////////////////////////////////////////////////////////////////////
 				///here's an example of using the getConString method!
@@ -62,5 +63,12 @@ namespace ProjectTemplate
 				return "Something went wrong, please check your credentials and db name and try again.  Error: "+e.Message;
 			}
 		}
+
+		[WebMethod]
+		public int getAnumber(int baseNumber) {
+
+			return baseNumber + 45;
+		}
+
 	}
 }

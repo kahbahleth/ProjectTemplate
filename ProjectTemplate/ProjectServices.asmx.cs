@@ -56,7 +56,7 @@ namespace ProjectTemplate
 				MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
 				DataTable table = new DataTable();
 				adapter.Fill(table);
-				return "Success!";
+				return "Success! Team4";
 			}
 			catch (Exception e)
 			{
@@ -65,10 +65,40 @@ namespace ProjectTemplate
 		}
 
 		[WebMethod]
-		public int getAnumber(int baseNumber) {
+		public void placeOrder(){
 
-			return baseNumber + 45;
+		
+		}
+        [WebMethod]
+        public void viewOrder(){
+
+
+        }
+
+        [WebMethod]
+        public void sendForm(){
+
+
+        }
+
+		[WebMethod]
+		public void sendReview(){
+
 		}
 
-	}
+        [WebMethod]
+        public void showReview(){
+
+
+        }
+
+        
+        [WebMethod]
+        public void viewBySeason(){
+
+
+        }
+
+
+    }
 }
